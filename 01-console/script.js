@@ -1,3 +1,8 @@
+// this a single line of code
+/*
+thsi is
+multiline comments
+*/
 console.log(100);
 console.log('Hello World');
 console.log(10, 'adfd', true);
