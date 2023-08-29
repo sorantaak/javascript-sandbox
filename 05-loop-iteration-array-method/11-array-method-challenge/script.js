@@ -38,12 +38,10 @@ const people = [
 
 const pepoleYpung = people
 	.filter((person) => person.age <= 25)
-	.map((person) => {
-		return {
-			name: person.firstName + ' ' + person.lastName,
-			email: person.email,
-		};
-	});
+	.map((person) => ({
+		name: person.firstName + ' ' + person.lastName,
+		email: person.email,
+	}));
 console.log(pepoleYpung);
 
 const numbers = [2, -30, 50, 20, -12, -9, 7];
