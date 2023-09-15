@@ -1,45 +1,42 @@
-let output;
+// document.getElementById()
 
-output = document.all;
-output = document.all[12];
-output = document.all.length;
+console.log(document.getElementById('app-title'));
+console.log(document.getElementById('app-title').id);
+console.log(document.getElementById('app-title').className);
+console.log(document.getElementById('app-title').getAttribute('id'));
 
-output = document.documentElement;
+//Set attribute
+// document.getElementById('app-title').id = 'new-id';
+// document.getElementById('new-id').title = 'shoping List';
+document.getElementById('app-title').setAttribute('class', 'title');
 
-output = document.head;
-output = document.body;
+const title = document.getElementById('app-title');
 
-output = document.head.children;
-output = document.body.children;
+// Get/Change content
+console.log(title.textContent);
+title.textContent = 'Hello World';
+title.innerText = 'Hello Again';
+title.innerHTML = '<strong>Shopping Lists</storng>';
 
-output = document.doctype;
-output = document.domain;
-output = document.URL;
-output = document.characterSet;
-output = document.contentType;
+// change styles
+title.style.color = 'red';
+title.style.background = 'black';
+title.style.padding = '10px';
+title.style.borderRadius = '10px';
 
-output = document.forms;
-output = document.forms[0];
-output = document.forms[0].id;
-output = document.forms[0].method;
-output = document.forms[0].action;
+// document.querySelector()
+console.log(document.querySelector('h1'));
+console.log(document.querySelector('#app-title'));
+console.log(document.querySelector('.container'));
+console.log(document.querySelector('input[type="text"]'));
+console.log(document.querySelector('li:nth-child(2)').innerText);
 
-// document.forms[0].id = 'new-id';
+const secondItem = document.querySelector('li:nth-child(2)');
+secondItem.innerText = 'Apple Juice';
+secondItem.style.color = 'red';
 
-// output = document.links;
-// output = document.links;
-// output = document.links[0];
-// output = document.links[0].href;
-// output = document.links[0].href = 'https://facebook.com';
-// output = document.links[0].id = 'google-link';
-// output = document.links[0].className = 'google-class';
-// output = document.links[0].classList;
-
-output = document.images;
-output = document.images[0];
-output = document.images[0].src;
-
-const forms = Array.from(document.forms); // convert HtmlCollection to array itrrable
-forms.forEach((form) => console.log(form));
-
-console.log(output);
+// Use these method on other elements
+const list = document.querySelector('ul');
+console.log(list);
+const firstItme = list.querySelector('li');
+firstItme.style.color = 'blue';
